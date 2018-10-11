@@ -1,15 +1,20 @@
 <template>
 
   <div class="geo-blog">
-    <!-- More to come -->
+    <AppMenu />
+    <!-- Map & content here -->
   </div>
     
 </template>
 
 <script>
-    export default {
-        name: "GeoBlog"
-    }
+  import AppMenu from './AppMenu.vue'
+
+  export default {
+    components: {
+      AppMenu,
+    },
+  }
 </script>
 
 <style scoped>
