@@ -19,39 +19,17 @@
 </template>
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
 
   export default {
-    computed: {
-      user () {
-        return this.$store.state.user
-      },
-      userPicture () {
-        return null
-        // TODO
-      },
-    },
-
-    methods: {
-      centerOnUser () {
-        // TODO
-      },
-      logout () {
-        // TODO
-        if (!this.user) {
-          const userData = {
-            profile: {
-            displayName: 'Mr Cat',
-            },
-          }
-          this.$store.commit('user', userData)
-        } else {
-          this.$store.commit('user', null)
-        }
-      },
-
-
-    },
-
+    computed: mapGetters([
+      'user',
+      'userPicture',
+    ]),
+    methods: mapActions({
+      centerOnUser: 'login',
+      logout: 'logout',
+    }),
   }
 </script>
 
