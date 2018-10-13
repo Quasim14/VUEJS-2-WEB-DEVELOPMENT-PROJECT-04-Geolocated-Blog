@@ -35,6 +35,8 @@
 
     },
 
+
+
     mounted () {
       window.addEventListener('message', this.handleMessage)
     },
